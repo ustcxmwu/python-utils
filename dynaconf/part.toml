@@ -1,0 +1,11 @@
+[default]
+host = "server"
+port = 5555
+auth = {user="admin", passwd="1234"}
+fuxi = "fuxi 123 123"
+
+
+[wuxiaomin]
+host = "xiaomin"
+port = 8888
+auth = {user="www", passwd="9999"}
