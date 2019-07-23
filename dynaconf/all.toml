@@ -1,11 +1,12 @@
 [default]
-host = "server"
-port = 5555
-auth = {user="admin", passwd="1234"}
-fuxi = "fuxi fuxi"
+xhost = "server"
+xport = 5555
+xport = 6666
+xauth = {www="admin", passwd="1234"}
+xfuxi = "fuxi fuxi"
 
 
 [game]
 host = "game1"
 port = 5555
-auth = {user="adminxxx", passwd="1234xx"}
+auth = {0="adminxxx", passwd="1234xx"}

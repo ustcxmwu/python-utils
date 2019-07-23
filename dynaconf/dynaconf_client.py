@@ -13,7 +13,7 @@ if __name__ == '__main__':
 
     all_settings = LazySettings(
         ENV_FOR_DYNACONF=args.all,
-        SETTINGS_FILE_FOR_DYNACONF=['all.toml'],
+        SETTINGS_FILE_FOR_DYNACONF=['all.toml', 'part.toml'],
     )
 
     part_settings = LazySettings(
@@ -26,7 +26,14 @@ if __name__ == '__main__':
     print(all_settings.AUTH.user)
     print(all_settings.FUXI)
 
+    print(all_settings.XHOST)
+    print(all_settings.XPORT)
+    print(all_settings.XAUTH.www)
+    print(all_settings.XFUXI)
+
     print(part_settings.HOST)
     print(part_settings.PORT)
     print(part_settings.AUTH.user)
     print(part_settings.FUXI)
+
+    print(eval("None"))
