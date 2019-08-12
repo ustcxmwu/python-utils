@@ -5,7 +5,7 @@
     OnLine_Receiver: techtest@tenez.com
     on-off: on
 
-  DB:
+  db:
     host: localhost
     username: myself
     password: skyyj

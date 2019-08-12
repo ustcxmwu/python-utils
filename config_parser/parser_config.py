@@ -1,5 +1,6 @@
 import configparser
 import os
+import json
 
 
 def get_config(section, key):
@@ -14,3 +15,8 @@ if __name__ == '__main__':
     print(dir)
     host = get_config("database", "dbhost")
     print(host)
+
+    print(2*(2, 3))
+    a = [(2, 3), (4, 5), (2, 3)]
+    d = json.dumps(a)
+    print(d)

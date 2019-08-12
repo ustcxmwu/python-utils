@@ -20,12 +20,15 @@ if __name__=='__main__':
 
     print(type(x))
     print(x)
+    print('==================')
+    print(x.keys())
+    print('==================')
     print(x['EMAIL'])
     print(type(x['EMAIL']))
     print(x['EMAIL']['Smtp_Server'])
     print(type(x['EMAIL']['Smtp_Server']))
-    print(x['DB'])
-    print(x['DB']['host'])
+    print(x['db'])
+    print(x['db']['host'])
 
     print(x.get('DB').get('host'))
 
