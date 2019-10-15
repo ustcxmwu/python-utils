@@ -1,7 +1,7 @@
 import os
 
 
-def traverse_folder(target_folder):
+def traverse_folder(target_folder, func):
     if not os.path.isdir(target_folder):
         return
     zh_vtt_files = []
@@ -10,9 +10,9 @@ def traverse_folder(target_folder):
             candidate = os.path.join(root, oneFile)
             if os.path.isfile(candidate) and (candidate.find('zh-CN.vtt') or candidate.find('en.vtt') > 0):
                 zh_vtt_files.append(candidate)
-                vtt2srt(candidate)
+                func(candidate)
             elif os.path.isdir(candidate):
-                sub_zh_vtt_files = traverse_folder(candidate)
+                sub_zh_vtt_files = traverse_folder(candidate, func)
                 zh_vtt_files.extend(sub_zh_vtt_files)
 
     return zh_vtt_files
@@ -37,5 +37,5 @@ def vtt2srt(file_path):
 
 if __name__ == '__main__':
     udacity = r'E:\utorrent_download\Udacity - Deep Reinforcement Learning (Nanodegree Program)'
-    vtt_files = traverse_folder(udacity)
+    vtt_files = traverse_folder(udacity, vtt2srt)
     print(vtt_files)

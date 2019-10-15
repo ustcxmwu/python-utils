@@ -38,5 +38,7 @@ if __name__ == '__main__':
     # hp: 1200
     # sp: 0
     # """)
+    # print(a)
+    print(yaml.__version__)
     a = Config()
     print(a.Smtp_Server)
