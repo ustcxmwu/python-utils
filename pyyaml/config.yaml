@@ -4,7 +4,6 @@ default:
     Password: Password
     OnLine_Receiver: techtest@tenez.com
     on-off: on
-    type: !!python/object:__main__.AlgoType {Online}
 
 
 custom:
@@ -13,4 +12,9 @@ custom:
     Password: Password
     OnLine_Receiver: techtest@tenez.com
     on-off: on
-#    type: !!python/object:__main__.AlgoType {Offline}
+
+worker:
+    -   a: 1
+        b: 3
+    -   c: 4
+        d: 5

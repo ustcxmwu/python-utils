@@ -1,0 +1,66 @@
+version: 1
+disable_existing_loggers: true
+root:
+    level: DEBUG
+    handlers: [console, file]
+loggers:
+    rlease:
+        handlers: [console, debug, info, warning, error]
+        propagate: false
+
+handlers:
+    console:
+        class: logging.StreamHandler
+        level: DEBUG
+        stream: ext://sys.stdout
+        formatter: simple
+        # filters: [require_debug_true, ]
+    file:
+        class: logging.handlers.RotatingFileHandler
+        level: DEBUG
+        formatter: detailed
+        filename: {{app}}.file.log
+        maxBytes: 5242880   # 5Mb
+        mode: w
+        encoding: utf-8
+    debug:
+        class: logging.handlers.RotatingFileHandler
+        level: DEBUG
+        formatter: detailed
+        filename: {{app}}.debug.log
+        maxBytes: 5242880     # 5Mb
+        mode: w
+        encoding: utf-8
+    info:
+        class: logging.handlers.RotatingFileHandler
+        level: INFO
+        formatter: detailed
+        filename: {{app}}.info.log
+        maxBytes: 5242880   # 5Mb
+        mode: w
+        encoding: utf-8
+    warning:
+        class: logging.handlers.RotatingFileHandler
+        level: WARNING
+        formatter: detailed
+        filename: {{app}}.warning.log
+        maxBytes: 5242880  # 5Mb
+        mode: w
+        encoding: utf-8
+    error:
+        class: logging.handlers.RotatingFileHandler
+        level: ERROR
+        formatter: detailed
+        filename: {{app}}.error.log
+        maxBytes: 5242880 # 5Mb
+        mode: w
+        encoding: utf-8
+
+formatters:
+    simple:
+        class: logging.Formatter
+        format: "%(asctime)s %(levelname)s %(message)s"
+    detailed:
+        class: logging.Formatter
+        format: '[%(filename)s:%(lineno)d] %(asctime)s %(levelname)s %(message)s'
+

@@ -39,6 +39,9 @@ if __name__ == '__main__':
     # sp: 0
     # """)
     # print(a)
-    print(yaml.__version__)
-    a = Config()
-    print(a.Smtp_Server)
+    # print(yaml.__version__)
+    # a = Config()
+    # print(a.Smtp_Server)
+    with open("config.yaml") as f:
+        a = yaml.full_load(f)
+    print(a)

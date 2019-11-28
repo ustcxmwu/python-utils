@@ -141,6 +141,9 @@ class MyPDFHandler(object):
 
 
 if __name__ == '__main__':
-    handler = MyPDFHandler("./2012.李航.统计学习方法-origin.pdf")
-    handler.add_bookmarks_by_read_txt("./李航.txt", page_offset=16)
-    handler.save2file("./2012.李航.统计学习方法.pdf")
+    # handler = MyPDFHandler("./2012.李航.统计学习方法-origin.pdf")
+    # handler.add_bookmarks_by_read_txt("./李航.txt", page_offset=16)
+    # handler.save2file("./2012.李航.统计学习方法.pdf")
+    handler = MyPDFHandler("./Swing.pdf")
+    handler.add_bookmarks_by_read_txt("./bookmark-swing.txt", page_offset=3)
+    handler.save2file("./深入学习：JFC SWING—JAVA 基础类组件集.pdf")

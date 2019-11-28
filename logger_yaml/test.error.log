@@ -1,0 +1,6 @@
+[client.py:28] 2019-11-22 17:03:38,027 ERROR error 伏羲伏羲, rlease
+[client.py:29] 2019-11-22 17:03:38,028 CRITICAL critical 伏羲伏羲, rlease
+[client.py:28] 2019-11-22 17:04:43,902 ERROR error 伏羲伏羲, rlease
+[client.py:29] 2019-11-22 17:04:43,903 CRITICAL critical 伏羲伏羲, rlease
+[client.py:26] 2019-11-22 17:05:45,133 ERROR error 伏羲伏羲, rlease
+[client.py:27] 2019-11-22 17:05:45,133 CRITICAL critical 伏羲伏羲, rlease
