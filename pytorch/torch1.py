@@ -15,7 +15,7 @@ if __name__ == '__main__':
     print(type(e))
     f = torch.randn(2, 3)
     print(f)
-    g = torch.range(2, 8, 1)
+    g = torch.arange(2, 8, 1)
     print(g)
 
     h = torch.zeros(2, 3)

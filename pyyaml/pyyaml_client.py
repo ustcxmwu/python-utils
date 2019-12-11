@@ -3,7 +3,6 @@ from enum import Enum
 
 import yaml
 
-
 class Hero:
     def __init__(self, name, hp, sp):
         self.name = name
